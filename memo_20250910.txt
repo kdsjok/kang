@@ -26,4 +26,15 @@
 
 <현업>
 1) 삼성 GIT 접속정보
- - 계정(이전:이성우), 접속 URL
+ - 계정, 접속 URL
+
+--------------------
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import precision_score, recall_score
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+from xgboost import XGBClassifier
+from lightgbm import LGBMClassifier
+from sklearn.svm import SVC
