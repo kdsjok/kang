@@ -38,3 +38,68 @@ from sklearn.ensemble import GradientBoostingClassifier
 from xgboost import XGBClassifier
 from lightgbm import LGBMClassifier
 from sklearn.svm import SVC
+--------------------------------
+이 라이브러리들을 외부에서 받아서 사용하려면, 다음과 같은 방법들이 있습니다:
+
+## 1. pip를 통한 설치 (가장 일반적)
+
+```bash
+pip install pandas numpy scikit-learn xgboost lightgbm
+```
+
+## 2. conda를 통한 설치
+
+```bash
+conda install pandas numpy scikit-learn
+conda install -c conda-forge xgboost lightgbm
+```
+
+## 3. requirements.txt 파일 생성
+
+```txt
+pandas>=1.0.0
+numpy>=1.18.0
+scikit-learn>=0.23.0
+xgboost>=1.0.0
+lightgbm>=3.0.0
+```
+
+그리고 설치:
+```bash
+pip install -r requirements.txt
+```
+
+## 용량 정보
+
+각 라이브러리의 대략적인 용량 (설치 후):
+- **pandas**: 50-100MB
+- **numpy**: 30-50MB  
+- **scikit-learn**: 20-30MB
+- **xgboost**: 50-100MB
+- **lightgbm**: 50-80MB
+
+**총합**: 약 200-300MB 정도
+
+## 주의사항
+
+1. **xgboost와 lightgbm**은 C++ 기반 라이브러리로, 설치 시 컴파일이 필요할 수 있습니다
+2. **Windows 환경**에서는 일부 라이브러리가 설치에 어려움을 겪을 수 있습니다
+3. **GPU 지원**을 원한다면 추가 설치가 필요할 수 있습니다
+
+## 간단한 테스트 코드
+
+```python
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import precision_score, recall_score
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+from xgboost import XGBClassifier
+from lightgbm import LGBMClassifier
+from sklearn.svm import SVC
+
+print("모든 라이브러리 임포트 성공!")
+```
+
+필요한 설치 명령어를 실행하시면 됩니다!
